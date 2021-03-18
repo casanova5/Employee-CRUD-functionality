@@ -1,0 +1,14 @@
+{% extends 'base.html'  %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container mt-4">
+<h1>Enter the ID you want to update details of:</h1>
+    {{failure}}
+<form action="{% url 'updatecheck' %}" method="POST">
+{% csrf_token %}
+    <label style="margin-top: 25px;">Employee id</label> </br>
+ <input type="number" name="eid"/><br/></br>
+<input type="submit" value="Update Check"/>
+</form>
+    </div>
+{% endblock %}
